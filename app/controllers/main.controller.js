@@ -59,9 +59,10 @@ module.exports = {
 	
 	// if neither correct UTC nor natural date then show null values
 	else {
-	
-            unix: null,          
-            natural: null
+		
+	var result = {  
+        unix: null,          
+        natural: null
 	};  
 	//console.log(result);		
 	res.json(result);	
