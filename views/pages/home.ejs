@@ -1,17 +1,26 @@
 <div class="container">
+
+
 <h1>Timestamp microservice</h1>
 	<p>
     This a showcase application to fulfill requirements of freeCodeCamp Timestamp Microservice challenge
 	https://www.freecodecamp.org/challenges/timestamp-microservice
 	<br>
-	You can either provide call URL including unix timestamp or natural date<br>
-	<a href="/1450137600" target="blank">"../1450137600"</a><br>
-	<a href="/December%2015,%202015" target="blank">"../December%2015,%202015"</a><br>
+	You can either provide call URL including unix timestamp:<br>
+	<a href="/1450137600" target="_blank">"../1450137600"</a><br>
 	<br>
-	or use us below input box to start call.<br>
-	Dates which are not following RFC2822 or ISO 8601 will lead to error and shows no result. E.g.<br>
-	<a href="/December%2015,%20565652015" target="blank">"../December%2015,%20565652015"</a><br>
+	or natural date following RFC, ISO conventions:<br>
 	
+	<a href="/December%2015,%202015" target="_blank">"/December%2015,%202015"</a><br>
+	<a href="/2018-05-12T14:59:36.760Z" target="_blank">"/2018-05-12T14:59:36.760Z"</a><br>
+	<a href="/2010 June 9" target="_blank">"/2010 June 9Z"</a><br>
+	
+	<br>
+	Dates which are not following RFC2822 or ISO 8601 will lead to error and shows no result. E.g.<br>
+	<a href="/December%2015,%20565652015" target=":_blank">"/December%2015,%20565652015"</a><br>
+	<a href="/2147483648" target="_blank">"2147483648"</a><br>
+	<a href="/−2147483649" target="_blank">"−2147483649"</a><br>
+	<a href="/2A47483648" target="_blank">"2A47483648"</a><br>
 	</p>
 
  </div>

@@ -24,8 +24,8 @@ module.exports = {
 	console.log(utcDate);
 	//console.log(timestamp.toString()); // shows 'Invalid Date'
 
-		
-	if (date.length <=10 && !isNaN(date) && date<=2100000000) { 
+	// if input date is a number and between maximum and minimum defined unix time
+	if (!isNaN(date) && date<2147483648 && date>=-2147483648) { 
 	//console.log("linux timestamp");
 	var utcDate = date.toString();
 	//console.log(utcDate);
@@ -38,18 +38,16 @@ module.exports = {
             natural: naturalDate
 	};  
 
-	console.log(result);	
+	//console.log(result);	
 	res.json(result);
 	}
 	
-	
+	// if parse utcDate leads not to an error
 	else if (!isNaN(utcDate)){
 	//console.log("natural timestamp");
 	
 	var naturalDate = date.toString();
 	//console.log(naturalDate);	
-	
-
 	
 	var result = {  
             unix: utcDate,          
@@ -59,16 +57,13 @@ module.exports = {
 	res.json(result);	
 	}
 	
-	
+	// if neither correct UTC nor natural date then show error
 	else {
 	
-	console.log("not a linux timestamp and not a natural date");
-	res.render('pages/home', {
-     //errors: req.flash('errors')
-	});
+	//console.log("not a linux timestamp and not a natural date");
+	res.json("not a linux timestamp and not a natural date");	
 	}
-	
-	
+
 
  }
  
