@@ -53,15 +53,18 @@ module.exports = {
             unix: utcDate,          
             natural: naturalDate
 	};  
-	console.log(result);		
+	//console.log(result);		
 	res.json(result);	
 	}
 	
-	// if neither correct UTC nor natural date then show error
+	// if neither correct UTC nor natural date then show null values
 	else {
 	
-	//console.log("not a linux timestamp and not a natural date");
-	res.json("not a linux timestamp and not a natural date");	
+            unix: null,          
+            natural: null
+	};  
+	//console.log(result);		
+	res.json(result);	
 	}
 
 
