@@ -20,7 +20,10 @@ app.use(bodyParser.json());
 // set the routes =============================
 app.use(require('./app/routes'));
 
+// port definition
+var   port = process.env.PORT || 8080;
+
 // start our engines ===========================
-app.listen(8080, function() {
-  console.log(`App listening on 8080`);
+app.listen(port, () => {
+  console.log(`App listening on ${port}`);
 });
